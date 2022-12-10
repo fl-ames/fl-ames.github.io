@@ -52,9 +52,12 @@ Let's add an **Assignment** element to the flow now:
 - Operator: **Add**
 - Value: **🌲**
 
-The main focus of this article is to demonstrate how to repeat a section of your flow a specific number of times. The assignment element we just created is the section that we want to repeat. You might think that you need to use the loop element for this, but that is not the case. A loop element is used to iterate over a collection of items and perform an action on each element in the collection. When you simply want to repeat a certain part of your flow a certain number of times, you need to construct the loop yourself.
+The main focus of this article is to demonstrate how to repeat a section of your flow a specific number of times. The assignment element we just created is the section that we want to repeat.  If we can repeat this element 21 times, we will end up with a text variable containing 21 emojis. 
+You might think that you need to use the loop element for this, but that is not the case. A loop element is used to iterate over a collection of items and perform an action on each element in the collection. When you simply want to repeat a certain part of your flow a certain number of times, you need to construct the loop yourself.
 
+### Constructing the loop
 
+A loop must have a condition that determines when it should stop running. If a loop continues indefinitely, it will consume all of the available memory resources. If a flow exceeds the maximum number of elements allowed (which is 2000), it will give an error.
 
 
 
