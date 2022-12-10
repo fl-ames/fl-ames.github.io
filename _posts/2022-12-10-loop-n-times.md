@@ -26,20 +26,19 @@ One approach could have been to create a separate text variable for each possibl
 To break the development process into manageable chunks, the first step I took was to dynamically generate a line of emojis of a certain length.
 
 I created an empty text variable to hold the emojis:
+==
 - Resource Type: **Variable**
 - API Name: **varTextTreeDisplay**
 - Data Type: **Text**
+==
 
-I left the other fields and checkboxes untouched.
-
-To determine the number of emojis, I created another variable:
+To determine the number of emojis to be displayed, I created another variable. This variable will store the total number of trees in the game. (In this case I gave it a default value of 21)
 - Resource Type: **Variable**
 - API Name: **varNumberTreeTotal**
 - Data Type: **Number**
 - Decimal Places: **0**
 - Default Value: **21**
 
-This variable will store the total number of trees in the game. (In this case I gave it a default value of 21)
 
 Let's add an **Assignment** element to the flow now:
 - Label: **Add one emoji to varTextTreeDisplay**
