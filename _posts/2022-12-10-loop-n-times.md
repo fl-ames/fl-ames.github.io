@@ -27,29 +27,29 @@ To break the development process into manageable chunks, the first step I took w
 
 I created an empty text variable to hold the emojis:
 
-```
+<code>
 - Resource Type: **Variable**
 - API Name: **varTextTreeDisplay**
 - Data Type: **Text**
-```
+</code>
 
 To determine the number of emojis to be displayed, I created another variable. This variable will store the total number of trees in the game. (In this case I gave it a default value of 21)
-```
+<code>
 - Resource Type: **Variable**
 - API Name: **varNumberTreeTotal**
 - Data Type: **Number**
 - Decimal Places: **0**
 - Default Value: **21**
-```
+</code>
 
 Let's add an **Assignment** element to the flow now:
-```
+<code>
 - Label: **Add one emoji to varTextTreeDisplay**
 - API Name: **Add_one_emoji_to_varTextTreeDisplay**
 - Variable: **{!varTextTreeDisplay}**
 - Operator: **Add**
 - Value: **🌲**
-```
+</code>
 
 The main focus of this article is to demonstrate how to repeat a section of your flow a specific number of times. The assignment element we just created is the section that we want to repeat.  If we can repeat this element 21 times, we will end up with a text variable containing 21 emojis. 
 You might think that you need to use the loop element for this, but that is not the case. A loop element is used to iterate over a collection of items and perform an action on each element in the collection. When you simply want to repeat a certain part of your flow a certain number of times, you need to construct the loop yourself.
