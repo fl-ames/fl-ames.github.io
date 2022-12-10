@@ -15,22 +15,49 @@ When I was developing this game, I had the idea of creating a series of Christma
 I want to display a line of tree emojis that can be in a decorated or undecorated state, like this:
 ```
 🌲🌲🌲🌲🌲🌲🌲
-'''
+```
 or 
-'''
+```
 🎄🎄🎄🌲🌲🌲🌲
-'''
+```
 
 One approach could have been to create a separate text variable for each possible line, but this would require a large number of variables and would make the flow more complex when it came time to display the text. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. Therefore, I needed to come up with a solution that could dynamically generate the text variable using logic. 
 
 To break the development process into manageable chunks, the first step I took was to dynamically generate a line of emojis of a certain length.
 
-I created a text variable to hold the emoji's
-- Create a New Resource
+### Resources
+
+To begin, I created an empty text variable to hold the emojis:
 - Resource Type: **Variable**
 - API Name: **varTextTreeDisplay**
-- Description: **Textual representation of the state of game**
+- Description: **Textual representation of the state of the game**
 - Data Type: **Text**
-- Leave the rest untouched and click **Done**
+
+I left the other fields and checkboxes untouched. This variable will be used to store the text that represents the current state of the game.
+
+To determine the number of emojis, I created another variable:
+- Resource Type: **Variable**
+- API Name: **varNumberTreeTotal**
+- Description: **Number of all trees**
+- Data Type: **Number**
+- Decimal Places: **0**
+- Default Value: **21**
+
+This variable will store the total number of trees in the game. (In this case we gave it a default value of 21)
+
+### Elements
+
+Let's add an **Assignment** element to the flow now:
+- Label: **Add one emoji to varTextTreeDisplay**
+- API Name: **Add_one_emoji_to_varTextTreeDisplay**
+- Variable: **{!varTextTreeDisplay}**
+- Operator: **Add**
+- Value: **🌲**
+
+The main focus of this article is to demonstrate how to repeat a section of your flow a specific number of times. The assignment element we just created is the section that we want to repeat. You might think that you need to use the loop element for this, but that is not the case. A loop element is used to iterate over a collection of items and perform an action on each element in the collection. When you simply want to repeat a certain part of your flow a certain number of times, you need to construct the loop yourself.
+
+
+
+
 
 
