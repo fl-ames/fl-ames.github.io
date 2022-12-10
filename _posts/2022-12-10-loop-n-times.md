@@ -30,7 +30,6 @@ To break the development process into manageable chunks, the first step I took w
 To begin, I created an empty text variable to hold the emojis:
 - Resource Type: **Variable**
 - API Name: **varTextTreeDisplay**
-- Description: **Textual representation of the state of the game**
 - Data Type: **Text**
 
 I left the other fields and checkboxes untouched. This variable will be used to store the text that represents the current state of the game.
@@ -38,7 +37,6 @@ I left the other fields and checkboxes untouched. This variable will be used to 
 To determine the number of emojis, I created another variable:
 - Resource Type: **Variable**
 - API Name: **varNumberTreeTotal**
-- Description: **Number of all trees**
 - Data Type: **Number**
 - Decimal Places: **0**
 - Default Value: **21**
