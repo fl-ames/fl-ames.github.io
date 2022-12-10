@@ -27,11 +27,9 @@ To break the development process into manageable chunks, the first step I took w
 
 I created an empty text variable to hold the emojis:
 
-<mark>
 - Resource Type: **Variable**
 - API Name: **varTextTreeDisplay**
 - Data Type: **Text**
-</mark>
   
 To determine the number of emojis to be displayed, I created another variable. This variable will store the total number of trees in the game. (In this case I gave it a default value of 21)
 
