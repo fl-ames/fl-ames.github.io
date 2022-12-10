@@ -8,37 +8,32 @@ The technique I am about to describe is not particularly advanced. Anyone could 
 
 The first game I made using Flow Builder was [Nim](https://en.wikipedia.org/wiki/Nim). If you're not familiar with it, Nim is a simple game where players take turns removing objects from a pile until there are none left. The player who empties the pile loses the game.
 
-When I was developing this game, I had the idea of creating a series of Christmas-themed games. I chose to use the emojis 🎄 and 🌲 to represent the pile in the Nim game. The player and the computer will take turns transforming the pine trees into Christmas trees. The player who lights up the last Christmas tree loses the game.
+When I was developing this game, I had the idea of creating a series of Christmas-themed games. The player and the computer will take turns decorating Christmas trees. The player who lights up the last Christmas tree loses the game. I chose to use the emojis 🎄 and 🌲 to represent the pile in the Nim game. The state of the game is represented by a line of tree emojis that are either decorated or undecorated, like this: 🎄🎄🎄🌲🌲🌲🌲
 
-## Approach
+## Create a line of trees
 
-I want to display a line of tree emojis that can be in a decorated or undecorated state, like this:
-
->🎄🎄🎄🌲🌲🌲🌲
-
-
-One approach could have been to create a separate text variable for each possible line, but this would require a large number of variables and would make the flow more complex when it comes to displaying the text. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. Therefore I needed to come up with a solution that could dynamically generate the text variable using logic. 
+One approach could have been to create a separate text variable for each possible line of tree emojis, but this would require a large number of variables and would make the flow more complex when it comes to displaying the text. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. Therefore I needed to come up with a solution that could dynamically generate the text variable using logic.
 
 To break the development process into manageable chunks, the first step I took was to dynamically generate a line of emojis of a certain length.
 
 I created an empty text variable to hold the emojis:
 
 - Resource Type: **Variable**
-- API Name: **varTextTreeDisplay**
+- API Name: **TreeDisplay**
 - Data Type: **Text**
   
 To determine the number of emojis to be displayed, I created another variable. This variable will store the total number of trees in the game. (In this case I gave it a default value of 21)
 
 - Resource Type: **Variable**
-- API Name: **varNumberTreeTotal**
+- API Name: **TreeTotal**
 - Data Type: **Number**
 - Decimal Places: **0**
 - Default Value: **21**
 
-Let's add an **Assignment** element to the flow now:
-- Label: **Add one emoji to varTextTreeDisplay**
-- API Name: **Add_one_emoji_to_varTextTreeDisplay**
-- Variable: **{!varTextTreeDisplay}**
+Let's add an **Assignment** element to the flow to add a tree to the empty varTextTreeDisplay variable:
+- Label: **Add one emoji to TreeDisplay**
+- API Name: **Add_one_emoji_to_TreeDisplay**
+- Variable: **{!TreeDisplay}**
 - Operator: **Add**
 - Value: **🌲**
 
