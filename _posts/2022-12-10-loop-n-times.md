@@ -21,18 +21,16 @@ or
 🎄🎄🎄🌲🌲🌲🌲
 ```
 
-One approach could have been to create a separate text variable for each possible line, but this would require a large number of variables and would make the flow more complex when it comes to display the text. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. Therefore, I needed to come up with a solution that could dynamically generate the text variable using logic. 
+One approach could have been to create a separate text variable for each possible line, but this would require a large number of variables and would make the flow more complex when it comes to displaying the text. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. Therefore I needed to come up with a solution that could dynamically generate the text variable using logic. 
 
 To break the development process into manageable chunks, the first step I took was to dynamically generate a line of emojis of a certain length.
 
-### Resources
-
-To begin, I created an empty text variable to hold the emojis:
+I created an empty text variable to hold the emojis:
 - Resource Type: **Variable**
 - API Name: **varTextTreeDisplay**
 - Data Type: **Text**
 
-I left the other fields and checkboxes untouched. This variable will be used to store the text that represents the current state of the game.
+I left the other fields and checkboxes untouched.
 
 To determine the number of emojis, I created another variable:
 - Resource Type: **Variable**
@@ -41,9 +39,7 @@ To determine the number of emojis, I created another variable:
 - Decimal Places: **0**
 - Default Value: **21**
 
-This variable will store the total number of trees in the game. (In this case we gave it a default value of 21)
-
-### Elements
+This variable will store the total number of trees in the game. (In this case I gave it a default value of 21)
 
 Let's add an **Assignment** element to the flow now:
 - Label: **Add one emoji to varTextTreeDisplay**
