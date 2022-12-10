@@ -21,7 +21,7 @@ or
 🎄🎄🎄🌲🌲🌲🌲
 ```
 
-One approach could have been to create a separate text variable for each possible line, but this would require a large number of variables and would make the flow more complex when it came time to display the text. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. Therefore, I needed to come up with a solution that could dynamically generate the text variable using logic. 
+One approach could have been to create a separate text variable for each possible line, but this would require a large number of variables and would make the flow more complex when it comes to display the text. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. Therefore, I needed to come up with a solution that could dynamically generate the text variable using logic. 
 
 To break the development process into manageable chunks, the first step I took was to dynamically generate a line of emojis of a certain length.
 
