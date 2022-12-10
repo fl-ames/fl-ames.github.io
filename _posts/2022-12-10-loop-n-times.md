@@ -13,13 +13,9 @@ When I was developing this game, I had the idea of creating a series of Christma
 ## Approach
 
 I want to display a line of tree emojis that can be in a decorated or undecorated state, like this:
-```
-🌲🌲🌲🌲🌲🌲🌲
-```
-or 
-```
-🎄🎄🎄🌲🌲🌲🌲
-```
+
+>🎄🎄🎄🌲🌲🌲🌲
+
 
 One approach could have been to create a separate text variable for each possible line, but this would require a large number of variables and would make the flow more complex when it comes to displaying the text. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. Therefore I needed to come up with a solution that could dynamically generate the text variable using logic. 
 
