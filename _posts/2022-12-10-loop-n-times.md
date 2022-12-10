@@ -8,7 +8,9 @@ The technique I am about to describe is not particularly advanced. Anyone could 
 
 The first game I made using Flow Builder was [Nim](https://en.wikipedia.org/wiki/Nim). If you're not familiar with it, Nim is a simple game where players take turns removing objects from a pile until there are none left. The player who empties the pile loses the game.
 
-When I was developing this game, I had the idea of creating a series of Christmas-themed games. The player and the computer will take turns decorating Christmas trees. The player who lights up the last Christmas tree loses the game. I chose to use the emojis 🎄 and 🌲 to represent the pile in the Nim game. The state of the game is represented by a line of tree emojis that are either decorated or undecorated, like this: 🎄🎄🎄🌲🌲🌲🌲
+When I was developing this game, I had the idea of creating a series of Christmas-themed games. For this Christmas variant of Nim the player and the computer take turns decorating Christmas trees and who lights up the last Christmas tree loses the game. 
+
+I chose to use the emojis 🎄 and 🌲 to represent the pile of the Nim game. The state of the game is represented by a line of tree emojis that are either decorated or undecorated, like this: 🎄🎄🎄🌲🌲🌲🌲
 
 ## Create a line of trees
 
