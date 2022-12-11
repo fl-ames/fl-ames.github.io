@@ -21,17 +21,17 @@ I chose to use the emojis 🎄 and 🌲 to represent the pile of the Nim game. T
 
 ## Displaying a line of Christmas trees
 
-One approach could have been to create a separate text variable for each possible state of the trees (all undecorated, one decorated rest undecorated, two decorated rest undecorated etc...). This would require a large number of variables and would add to the complexity of the flow when it comes to displaying the right text variable. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. I needed to come up with a solution that could dynamically generate the text variable using logic.
+One approach could have been to create a separate text variable for each possible state of the trees (no decorated tree, one decorated tree, two decorated trees etc...). This would require a large number of variables and would add to the complexity of the flow when it came to displaying the right text variable. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. I needed to come up with a solution that could dynamically generate the text variable using logic.
 
 To break the development process into manageable chunks, the first step I took was to dynamically generate a line of emojis of a certain length.
 
-I created an empty text variable to hold the emojis:
+Let's create an empty text variable to hold the emojis:
 
 - Resource Type: **Variable**
 - API Name: **TreeDisplay**
 - Data Type: **Text**
   
-To determine the number of emojis to be displayed, I created another variable. This variable will store the total number of trees in the game. (In this case I gave it a default value of 21)
+To determine the number of emojis to be displayed, create another variable. This variable will store the total number of trees in the game. (In this case I gave it a default value of 21)
 
 - Resource Type: **Variable**
 - API Name: **TreeTotal**
@@ -39,18 +39,18 @@ To determine the number of emojis to be displayed, I created another variable. T
 - Decimal Places: **0**
 - Default Value: **21**
 
-And then the real wotkhorse of this setup: Let's add an **Assignment** element to the flow to add an emoji to the empty varTextTreeDisplay variable:
+And then the most important action in this setup: let's add an **Assignment** element to the flow to add an emoji to the empty varTextTreeDisplay variable:
 - Label: **Add one emoji to TreeDisplay**
 - API Name: **Add_one_emoji_to_TreeDisplay**
 - Variable: **{!TreeDisplay}**
 - Operator: **Add**
 - Value: **🌲**
 
-The assignment element we just created is the section that we want to repeat. If we can repeat this element 21 times, we will end up with a text variable containing 21 emojis. 
+The assignment element we just created is the section that we want to repeat. If we can repeat this element 21 times, we will end up with our first goal, a text variable containing 21 tree emojis.
 
 ## Constructing the loop
 
-A loop must have a condition that determines when it should stop running. If a loop continues indefinitely, it will consume all of the available memory resources. If a flow exceeds the maximum number of elements allowed (which is 2000), it will give an error.
+A loop must have a condition that determines when it should stop running. If a loop continues indefinitely, it will consume all of the available memory resources. In our case if a flow exceeds the maximum number of elements allowed (which is 2000), it will give an error. 
 
 
 ## Professional use
