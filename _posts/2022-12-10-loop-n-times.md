@@ -14,7 +14,7 @@ The first game I made using Flow Builder was [Nim](https://en.wikipedia.org/wiki
 
 When I was developing this game, I had the idea of creating a series of Christmas-themed games. For this Christmas variant of Nim the player and the computer take turns decorating Christmas trees and who lights up the last Christmas tree loses the game.
 
-This is a recording of the game play of Christmas Nim.
+This is a recording of me playing the game:
 ![Nim gameplay](/assets/img/nimgameplay.gif){: .mx-auto.d-block :}
 
 I chose to use the emojis 🎄 and 🌲 to represent the pile of the Nim game. The state of the game is represented by a line of tree emojis that are either decorated or undecorated.
