@@ -20,11 +20,13 @@ This is a recording of me playing the game:
 
 I chose to use the emojis 🎄 and 🌲 to represent the pile of the Nim game. The state of the game is represented by a line of tree emojis that are either decorated or undecorated.
 
-## Putting up the Christmas trees
-
 I could have create a separate text variable for each possible state of the trees (no decorated tree, one decorated tree, two decorated trees etc...). This would require a large number of variables and would add to the complexity of the flow when it came to displaying the right text variable. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. I needed to come up with a solution that could dynamically generate the text variable using logic.
 
-The first step I took was to dynamically generate a line of emojis of a certain length.
+## Putting up the Christmas trees
+
+Let's go through the challenge together:
+
+First I created some resources to 
 
 I created an empty text variable to hold the emojis:
 
