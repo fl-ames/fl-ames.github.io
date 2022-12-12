@@ -15,6 +15,7 @@ The first game I made using Flow Builder was [Nim](https://en.wikipedia.org/wiki
 When I was developing this game, I had the idea of creating a series of Christmas-themed games. For this Christmas variant of Nim the player and the computer take turns decorating Christmas trees and who lights up the last Christmas tree loses the game.
 
 This is a recording of me playing the game:
+
 ![Nim gameplay](/assets/img/nimgameplay.gif){: .mx-auto.d-block :}
 
 I chose to use the emojis 🎄 and 🌲 to represent the pile of the Nim game. The state of the game is represented by a line of tree emojis that are either decorated or undecorated.
@@ -52,9 +53,11 @@ The assignment element is the section that we want to repeat. If we can repeat t
 
 A loop must have a condition that determines when it should stop running. If a loop continues indefinitely, it will consume all of the available memory resources. In case of Salesforce there is limit of allowed elements to call in a flow (which is 2000). If a loop does not stop and you reach the 2000 elements, your flow will break and an error will be given. 
 
-To determine if our loop should stop running I added a decision element before the assignment element:
-- Label:
-- API Name
+To determine if the loop should stop running I added a decision element before the assignment element:
+- Label: **Are all trees on display?**
+- API Name: **Are_all_trees_on_display**
+- Outcome Label: **Yes all on display**
+- Outcome API Name: **Yes all on display**
 
 So the decision checks if the amount is > 0 then 
 
