@@ -56,19 +56,30 @@ A loop must have a condition that determines when it should stop running. If a l
 To determine if the loop should stop running I added a decision element before the assignment element:
 - Label: **Are all trees on display?**
 - API Name: **Are_all_trees_on_display**
-- Outcome Label: **Yes all on display**
-- Outcome API Name: **Yes all on display**
+  - Outcome Label: **Yes all on display**
+  - Outcome API Name: **Yes all on display**
+  - Condition Requirements to Execute Outcome: **All Conditions Are Met (AND)**
+  - Resource: **{!TreeTotal}**
+  - Operator: **Equals**
+  - Value: **0**
 
-So the decision checks if the amount is > 0 then 
+So the decision checks if the TreeTotal variable is equal to zero to leave the loop.
 
-In the assignment element that's already in the flow I added an extra assignment:
+I replaced the assignment element in the flow to the default outcome of the decision and I added another assignment to the assigment element:
+
+- Variable: **{!TreeTotal}**
+- Operator: **Subtract**
+- Value: **1**
+
+
+In the assignment element we already implemented in the flow I added an extra assignment:
 - Variable: TreeTotal
 - Operator: Subtract
 - Value: 1
 
 then I created a path from the assignment element back to the decision element
 
-At last I added a screen element after the assignment flow with a display text component on it with the resource {!TreeDisplay}
+At last I added a screen element on the 'Yes all on display' path of the decision. It's just a screen with a display text component on it with the resource **{!TreeDisplay}** as a value.
 
 Here is what the flow looks like now:
 
