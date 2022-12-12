@@ -83,7 +83,7 @@ At last I added a screen element on the 'Yes all on display' path of the decisio
 
 Here is what the flow looks like now:
 
-IMG OF FLOW
+![Flow State 21 trees](/assets/img/flowstate21trees.png){: .mx-auto.d-block :}
 
 So what is happening here?
 Blablabla
