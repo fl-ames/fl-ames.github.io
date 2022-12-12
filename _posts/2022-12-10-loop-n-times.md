@@ -71,15 +71,7 @@ I replaced the assignment element in the flow to the default outcome of the deci
 - Operator: **Subtract**
 - Value: **1**
 
-
-In the assignment element we already implemented in the flow I added an extra assignment:
-- Variable: TreeTotal
-- Operator: Subtract
-- Value: 1
-
-then I created a path from the assignment element back to the decision element
-
-At last I added a screen element on the 'Yes all on display' path of the decision. It's just a screen with a display text component on it with the resource **{!TreeDisplay}** as a value.
+then I created a path from the assignment element back to the decision element and I added a screen element on the 'Yes all on display' path of the decision. It's just a screen with a display text component on it with the resource **{!TreeDisplay}** as a value.
 
 Here is what the flow looks like now:
 
