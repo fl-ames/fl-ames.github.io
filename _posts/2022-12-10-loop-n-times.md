@@ -20,9 +20,9 @@ This is a recording of me playing the game:
 
 I chose to use the emojis 🎄 and 🌲 to represent the pile of the Nim game. The state of the game is represented by a line of tree emojis that are either decorated or undecorated.
 
-## Displaying a line of Christmas trees
+## Putting up the Christmas trees
 
-One approach could have been to create a separate text variable for each possible state of the trees (no decorated tree, one decorated tree, two decorated trees etc...). This would require a large number of variables and would add to the complexity of the flow when it came to displaying the right text variable. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. I needed to come up with a solution that could dynamically generate the text variable using logic.
+I could have create a separate text variable for each possible state of the trees (no decorated tree, one decorated tree, two decorated trees etc...). This would require a large number of variables and would add to the complexity of the flow when it came to displaying the right text variable. Additionally, if the size of the pile changed, the entire game would have to be rebuilt. I needed to come up with a solution that could dynamically generate the text variable using logic.
 
 The first step I took was to dynamically generate a line of emojis of a certain length.
 
@@ -89,6 +89,24 @@ So what is happening here?
 Blablabla
 
 I could have added the decision element after the assignment and make the loop work perfectly fine for this case. The only difference in placing the decision before the section you want to repeat is that the loop condition is always checked, if you place it after the section, the section will always run at least once.
+
+## Decorating trees
+
+- Resource Type: **Variable**
+- API Name: **TreeDecorated**
+- Data Type: **Number**
+- Decimal Places: **0**
+- Default Value: **6**
+
+- Resource Type: **Formula**
+- API Name: **TreePicker**
+- Data Type: **Text**
+- Formula: **IF({!TreeTotal} > 21-{!TreeDecorated}, '🎄', '🌲')**
+
+In the assignment element of the flow I replaced the 🌲 value with the **{!TreePicker}** formula resource.
+
+Now every time we want to add a tree to the the TreeDisplay variable, the formula gets called, it checks 
+
 
 
 
